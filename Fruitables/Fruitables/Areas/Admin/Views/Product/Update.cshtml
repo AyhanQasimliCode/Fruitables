@@ -1,0 +1,64 @@
+﻿@using Fruitables.Areas.Admin.ViewModels.ProductVM
+@model UpdateProductVM
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="card-title">Update Product</h4>
+
+            <form asp-action="Update" method="post" enctype="multipart/form-data">
+
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="ExistingImage" />
+
+                <div class="form-group">
+                    <label>Existing Image:</label><br />
+                    @if (!string.IsNullOrEmpty(Model.ExistingImage))
+                    {
+                        <img src="~/uploads/@Model.ExistingImage" width="200" style="border-radius: 5px; margin-bottom: 10px;" />
+                    }
+                    else
+                    {
+                        <p class="text-muted">Şəkil yoxdur</p>
+                    }
+                </div>
+
+                <div class="form-group">
+                    <label>New Image (optional):</label>
+                    <input asp-for="Image" type="file" class="form-control" accept="image/*" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Price"></label>
+                    <input asp-for="Price" class="form-control" type="number" step="0.01" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CategoryId"></label>
+                    <select asp-for="CategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+                        <option value="">-- Select Category --</option>
+                    </select>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Update</button>
+                <a asp-action="Index" class="btn btn-light">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
