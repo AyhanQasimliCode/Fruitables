@@ -350,3 +350,4 @@ wwwroot\lib\lib\waypoints\links.php
 wwwroot\lib\lib\waypoints\waypoints.min.js
 wwwroot\uploads\0d065337-b561-4f9e-aeb1-531812f54e9c.jpeg
 wwwroot\uploads\fa3395ae-f2e9-4eb5-94d5-cc1a14aa6ab8.jpg
+wwwroot\assets\js\JavaScript.js

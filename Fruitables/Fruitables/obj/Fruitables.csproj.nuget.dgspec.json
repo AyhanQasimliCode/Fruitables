@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Darya\\Desktop\\CodeForFuture\\Fruitables\\Fruitables\\Fruitables.csproj": {}
+    "C:\\Users\\Darya\\Desktop\\CodeBack\\Fruitables\\Fruitables\\Fruitables.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Darya\\Desktop\\CodeForFuture\\Fruitables\\Fruitables\\Fruitables.csproj": {
+    "C:\\Users\\Darya\\Desktop\\CodeBack\\Fruitables\\Fruitables\\Fruitables.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Darya\\Desktop\\CodeForFuture\\Fruitables\\Fruitables\\Fruitables.csproj",
+        "projectUniqueName": "C:\\Users\\Darya\\Desktop\\CodeBack\\Fruitables\\Fruitables\\Fruitables.csproj",
         "projectName": "Fruitables",
-        "projectPath": "C:\\Users\\Darya\\Desktop\\CodeForFuture\\Fruitables\\Fruitables\\Fruitables.csproj",
+        "projectPath": "C:\\Users\\Darya\\Desktop\\CodeBack\\Fruitables\\Fruitables\\Fruitables.csproj",
         "packagesPath": "C:\\Users\\Darya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Darya\\Desktop\\CodeForFuture\\Fruitables\\Fruitables\\obj\\",
+        "outputPath": "C:\\Users\\Darya\\Desktop\\CodeBack\\Fruitables\\Fruitables\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
