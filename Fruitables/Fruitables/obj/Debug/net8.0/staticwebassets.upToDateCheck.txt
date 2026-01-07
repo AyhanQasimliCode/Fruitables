@@ -166,6 +166,7 @@ wwwroot\assets\img\vegetable-item-4.jpg
 wwwroot\assets\img\vegetable-item-5.jpg
 wwwroot\assets\img\vegetable-item-6.jpg
 wwwroot\assets\js\Basket.js
+wwwroot\assets\js\JavaScript.js
 wwwroot\assets\js\main.js
 wwwroot\assets\lib\easing\easing.js
 wwwroot\assets\lib\easing\easing.min.js
@@ -348,6 +349,14 @@ wwwroot\lib\lib\owlcarousel\owl.carousel.js
 wwwroot\lib\lib\owlcarousel\owl.carousel.min.js
 wwwroot\lib\lib\waypoints\links.php
 wwwroot\lib\lib\waypoints\waypoints.min.js
+wwwroot\uploads\0882b304-d179-4e44-8585-66beb502dac1.png
+wwwroot\uploads\0b8d25f2-1876-4f14-b961-af782d30ad43.png
 wwwroot\uploads\0d065337-b561-4f9e-aeb1-531812f54e9c.jpeg
+wwwroot\uploads\3c176b03-5858-42a3-8f84-582fcfffe494.png
+wwwroot\uploads\5f9b429e-a683-4122-ab7f-730a0888e467.png
+wwwroot\uploads\68318c49-3e22-4f83-bad3-ae844a8eca07.png
+wwwroot\uploads\90e276a3-cc64-4774-8108-630d8e410f34.png
+wwwroot\uploads\9dbae9fc-c312-4379-8ef9-3a9c30d285d8.png
+wwwroot\uploads\e1087092-240a-4939-97b4-d6ac3bb8bcc3.png
+wwwroot\uploads\f8e8c383-58a5-457a-9c40-b114decfce70.png
 wwwroot\uploads\fa3395ae-f2e9-4eb5-94d5-cc1a14aa6ab8.jpg
-wwwroot\assets\js\JavaScript.js

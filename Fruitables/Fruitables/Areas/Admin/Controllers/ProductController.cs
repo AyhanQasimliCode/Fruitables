@@ -1,5 +1,6 @@
 ﻿using Fruitables.Areas.Admin.ViewModels.ProductVM;
 using Fruitables.Data;
+using Fruitables.Helpers;
 using Fruitables.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -19,10 +20,12 @@ namespace Fruitables.Areas.Admin.Controllers
             _env = env;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1,int take = 5)
         {
             var products = await _context.Products
                 .Include(p => p.Category) 
+                .Skip((page * take) - take)
+                .Take(take)
                 .Select(p => new GetAllProductVM
                 {
                     Id = p.Id,
@@ -33,7 +36,17 @@ namespace Fruitables.Areas.Admin.Controllers
                 })
                 .ToListAsync();
 
-            return View(products); 
+            int pageCount = await GetPageCount(take);
+
+            Paginate<GetAllProductVM> paginate = new(products, page, pageCount);
+
+            return View(paginate); 
+        }
+        public async Task<int> GetPageCount(int take)
+        {
+            int count = await _context.Products.CountAsync();
+
+            return (int)Math.Ceiling((decimal)count / take);
         }
         public async Task<IActionResult> Create()
         {

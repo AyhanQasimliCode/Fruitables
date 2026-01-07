@@ -1,6 +1,11 @@
 ﻿@using Fruitables.Areas.Admin.ViewModels.ProductVM
-@model IEnumerable<GetAllProductVM>
-
+@using Fruitables.Helpers
+@model Paginate<GetAllProductVM>
+@{
+    int current = Model.CurrentPage;
+    int total = Model.TotalPage;
+    int range = 1; 
+}
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
@@ -27,7 +32,7 @@
                     </thead>
 
                     <tbody>
-                        @foreach (var item in Model)
+                        @foreach (var item in Model.Datas)
                         {
                             <tr>
                                 <td>
@@ -68,6 +73,35 @@
                     </tbody>
 
                 </table>
+                <nav aria-label="Page navigation example" style="margin-top: 15px; margin-left:400px">
+                    <ul class="pagination">
+                        <li class="page-item @(Model.HasPrevious ? "" : "disabled")"><a class="page-link"asp-action="Index"asp-route-page="@(current - 1)">Prev</a></li>
+
+                        @if (current > range + 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-action="Index" asp-route-page="1">1</a>
+                            </li>
+
+                            <li class="page-item disabled">
+                                <span class="page-link">...</span>
+                            </li>
+                        }
+                        @for (int i = Math.Max(1, current - range); i <= Math.Min(total, current + range); i++)
+                        {
+                            <li class="page-item @(i == current ? "active" : "")"><a class="page-link"asp-action="Index"asp-route-page="@i">@i</a></li>
+                        }
+                        @if (current < total - range)
+                        {
+                            <li class="page-item disabled">
+                                <span class="page-link">...</span>
+                            </li>
+
+                            <li class="page-item"><a class="page-link"asp-action="Index"asp-route-page="@total">@total</a></li>
+                        }
+                        <li class="page-item @(Model.HasNext ? "" : "disabled")"><a class="page-link"asp-action="Index"asp-route-page="@(current + 1)">Next</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
