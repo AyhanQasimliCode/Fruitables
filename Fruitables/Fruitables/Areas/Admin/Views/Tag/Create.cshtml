@@ -1,0 +1,27 @@
+﻿@using Fruitables.Areas.Admin.ViewModels.TagVM
+@model CreateTagVM
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create Tag</h4>
+
+            <form asp-area="Admin" asp-controller="Tag" asp-action="Create" method="post">
+                <div class="form-group">
+                    <label asp-for="Name">Tag Name</label>
+                    <input asp-for="Name" class="form-control" placeholder="Tag adı daxil edin" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-rounded btn-fw">
+                    Save
+                </button>
+
+                <a asp-area="Admin" asp-controller="Category" asp-action="Index"
+                   class="btn btn-secondary btn-rounded btn-fw">
+                    Back
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

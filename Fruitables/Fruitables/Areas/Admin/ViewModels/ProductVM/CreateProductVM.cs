@@ -18,6 +18,10 @@ namespace Fruitables.Areas.Admin.ViewModels.ProductVM
         public int CategoryId { get; set; }
 
         public List<Category> Categories { get; set; } = new List<Category>();
+        [Required(ErrorMessage = "En azi 1 tag secilmelidir")]
+        public List<int> TagIds { get; set; } = new();
+
+        public List<Tag> Tags { get; set; } = new();
 
         [Required(ErrorMessage = "Bos ola bilmez")]
         public IFormFile Image { get; set; } = null!;

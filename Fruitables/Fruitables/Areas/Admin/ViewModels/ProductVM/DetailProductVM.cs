@@ -12,6 +12,8 @@
 
         public string CategoryName { get; set; } 
 
-        public string Image { get; set; } 
+        public string Image { get; set; }
+        public List<string> Tags { get; set; } = new();
+
     }
 }

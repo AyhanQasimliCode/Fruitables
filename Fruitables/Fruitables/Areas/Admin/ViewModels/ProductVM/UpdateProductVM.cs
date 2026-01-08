@@ -23,6 +23,9 @@ namespace Fruitables.Areas.Admin.ViewModels.ProductVM
         public IFormFile? Image { get; set; }
 
         public List<Category> Categories { get; set; } = new List<Category>();
+        public List<int> TagIds { get; set; } = new();
+
+        public List<Tag> Tags { get; set; } = new();
     }
 
 }
